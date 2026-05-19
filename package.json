@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite dev --port=3000 --host=0.0.0.0",
     "build": "vite build",
+    "postbuild": "node prerender.js && cp -r dist/client/* dist/ 2>/dev/null || true",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
