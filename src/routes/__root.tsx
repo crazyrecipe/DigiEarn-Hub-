@@ -10,7 +10,7 @@ import {
 import { StoreProvider } from "@/lib/store";
 import { Toaster } from "@/components/ui/sonner";
 
-import appCss from "../styles.css?url";
+import "../styles.css";
 
 function NotFoundComponent() {
   return (
@@ -112,12 +112,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/c52b4f37-37d4-4716-be5c-6207ea281e24",
       },
     ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
+    links: [],
   }),
   shellComponent: RootShell,
   component: RootComponent,
